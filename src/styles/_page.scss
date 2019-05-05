@@ -1,28 +1,20 @@
 @import "variables";
 
-.book {
-  @media screen {
-    padding-top: 5vh;
+.page {
+  background-color: white;
+  margin: $page-gap;
+  box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5);
+  column-count: 2;
+  column-gap: 1cm;
+  overflow: hidden;
+
+  &[size="A4"] {
+    width: $a4-page-width;
+    height: $a4-page-height;
+    padding: $a4-margin-top $a4-margin-right $a4-margin-bottom $a4-margin-left;
   }
 
-  .page {
-    background-color: white;
-    margin: $page-gap;
-    box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5);
-
-    &[size="A4"] {
-
-      width: $a4-page-width;
-      height: $a4-page-height;
-
-      padding: $a4-top-margin $a4-right-margin $a4-bottom-margin $a4-left-margin;
-    }
-
-    column-count: 3;
-
-    @media print {
-      box-shadow: none;
-      margin: 0;
-    }
+  @media print {
+    box-shadow: none;
   }
 }

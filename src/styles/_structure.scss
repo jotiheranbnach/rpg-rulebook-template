@@ -18,5 +18,14 @@
 }
 
 .book {
-  background-color: bisque;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 5vh $page-gap $page-gap $page-gap;
+  @media print{
+    display: inherit;
+    padding: 0;
+  }
 }
