@@ -1,3 +1,8 @@
-* {
-  background-color: deeppink; // Just a test
-}
+// Base styles
+@import "variables";
+@import "global";
+@import "fonts";
+// Book related
+@import "structure";
+@import "page";
+@import "typography";

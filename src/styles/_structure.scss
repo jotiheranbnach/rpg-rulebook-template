@@ -1,0 +1,22 @@
+@import "variables";
+
+.head {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5vh;
+
+  display: flex;
+  align-items: center;
+  background-color: darkslategray;
+  padding: 0 $page-gap;
+
+  h1 {
+    color: white;
+  }
+}
+
+.book {
+  background-color: bisque;
+}
