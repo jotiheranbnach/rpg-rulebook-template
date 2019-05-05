@@ -1,0 +1,5 @@
+// Node modules (vendors)
+node_modules
+
+// Jetbrains config
+.idea/
