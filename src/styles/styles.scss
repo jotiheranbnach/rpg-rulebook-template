@@ -1,8 +1,9 @@
 // Base styles
-@import "variables";
-@import "global";
-@import "fonts";
+@import "core/variables";
+@import "core/global";
+@import "core/fonts";
+@import "core/head";
 // Book related
-@import "structure";
-@import "page";
-@import "typography";
+@import "book/book";
+@import "book/page";
+@import "book/typography";

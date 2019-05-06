@@ -1,0 +1,20 @@
+@import "../core/variables";
+
+@page {
+    size: A4;
+    margin: $a4-margin-top $a4-margin-right $a4-margin-bottom $a4-margin-left;
+}
+
+.book {
+  background-color: bisque;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 5vh $page-gap $page-gap $page-gap;
+
+  @media print{
+    display: inherit;
+    padding: 0;
+  }
+}
