@@ -26,13 +26,13 @@ The following things must be available on you machine. The versions displayed be
 First open you CLI and go into the folder where you want to put your next creative work.
 Then clone the repository:
 
-```console
+```bash
 git clone https://github.com/jotiheranbnach/rpg-rulebook-template.git
 ```
 
 Then step into the cloned repository and install all node modules:
 
-```console
+```bash
 cd rpg-rulebook-template
 npm install
 ```
