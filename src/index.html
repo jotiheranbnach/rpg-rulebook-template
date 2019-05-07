@@ -2,17 +2,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Beauregard - Charakterbogen</title>
+    <title>RPG Rulebook Template</title>
+
     <!-- Our styles -->
     <link rel="stylesheet" type="text/css" href="./styles/styles.css">
     <!-- Vendor styles -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-          integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7ustrong+nqUivzIebhndOJK28anvf"
           crossorigin="anonymous">
+
+    <!-- Vendor scripts -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+            crossorigin="anonymous"></script>
+    <!-- Our scripts -->
+    <script src="distributionAlgorithm.js"></script>
 </head>
 <body>
 <div class="head no-print">
     <h1><i class="fas fa-bars"></i> RPG Rulebook Template</h1>
+    <button class="distribution-button" onclick="distributeContent()">
+        <i class="fas fa-dice-d20"></i>
+        <span class="text">Distribute<br>Content</span>
+    </button>
 </div>
 <div class="book">
     <div class="page" size="A4">
@@ -64,49 +74,117 @@
             Waffengruppen eine auswählen. Immer wenn er
             einen Angriff mit einer Waffe aus der gewählten Gruppe durchführt, erhält er einen Bonus von +1 auf den
             Angriff und den Schaden.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a ante in quam consequat laoreet a sit amet
+
+        <p><strong>#1</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a ante in quam consequat laoreet a sit amet
             turpis. Mauris vitae sodales ligula, ac molestie urna. Pellentesque at erat accumsan, volutpat risus eget,
             congue tellus. Sed a placerat ligula, a bibendum magna. In non vulputate orci, eu imperdiet dolor. Etiam
             dictum, nisl in ornare maximus, mauris risus blandit libero, vitae cursus arcu felis ac sapien. Class aptent
             taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
-        <p>Proin enim quam, suscipit at ante id, fermentum ullamcorper tortor. Pellentesque a maximus mauris, ac
-            ullamcorper augue. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-            Donec porta porta feugiat. Aliquam vel finibus est. Pellentesque nec facilisis lacus. Vivamus leo ligula,
-            vehicula sit amet euismod vel, faucibus sit amet felis. Cras ligula tellus, congue non mollis et, facilisis
-            sed nulla. In hac habitasse platea dictumst. Proin eget ligula eu velit dictum rhoncus. Curabitur et elit
-            gravida est varius eleifend. Praesent eros nisi, mattis eu risus vestibulum, aliquam pellentesque arcu.
-            Nullam tincidunt mauris vitae accumsan faucibus.</p>
-        <p>Mauris tincidunt ultricies dignissim. Praesent sed dapibus metus, id ultrices leo. Etiam faucibus
-            sollicitudin rutrum. Cras dignissim molestie erat, fermentum fermentum quam sagittis at. Etiam ut gravida
-            sapien. Nam mollis orci in lectus condimentum, ut placerat neque mollis. Nam faucibus dui purus, nec
-            sagittis nisl mollis vel. Vestibulum vitae nulla in felis ornare viverra mattis a lacus. Duis vehicula sed
-            dolor vitae sagittis. Nullam vitae lectus volutpat, tincidunt leo ultricies, aliquam sem. Vestibulum
-            venenatis odio in nisl vehicula lobortis sed at sem.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a ante in quam consequat laoreet a sit amet
+        <p><strong>#2</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a ante in quam consequat laoreet a sit amet
             turpis. Mauris vitae sodales ligula, ac molestie urna. Pellentesque at erat accumsan, volutpat risus eget,
             congue tellus. Sed a placerat ligula, a bibendum magna. In non vulputate orci, eu imperdiet dolor. Etiam
             dictum, nisl in ornare maximus, mauris risus blandit libero, vitae cursus arcu felis ac sapien. Class aptent
             taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
-        <p>Proin enim quam, suscipit at ante id, fermentum ullamcorper tortor. Pellentesque a maximus mauris, ac
-            ullamcorper augue. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-            Donec porta porta feugiat. Aliquam vel finibus est. Pellentesque nec facilisis lacus. Vivamus leo ligula,
-            vehicula sit amet euismod vel, faucibus sit amet felis. Cras ligula tellus, congue non mollis et, facilisis
-            sed nulla. In hac habitasse platea dictumst. Proin eget ligula eu velit dictum rhoncus. Curabitur et elit
-            gravida est varius eleifend. Praesent eros nisi, mattis eu risus vestibulum, aliquam pellentesque arcu.
-            Nullam tincidunt mauris vitae accumsan faucibus.</p>
-        <p>Mauris tincidunt ultricies dignissim. Praesent sed dapibus metus, id ultrices leo. Etiam faucibus
-            sollicitudin rutrum. Cras dignissim molestie erat, fermentum fermentum quam sagittis at. Etiam ut gravida
-            sapien. Nam mollis orci in lectus condimentum, ut placerat neque mollis. Nam faucibus dui purus, nec
-            sagittis nisl mollis vel. Vestibulum vitae nulla in felis ornare viverra mattis a lacus. Duis vehicula sed
-            dolor vitae sagittis. Nullam vitae lectus volutpat, tincidunt leo ultricies, aliquam sem. Vestibulum
-            venenatis odio in nisl vehicula lobortis sed at sem.</p>
+        <p><strong>#3</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a ante in quam consequat laoreet a sit amet
+            turpis. Mauris vitae sodales ligula, ac molestie urna. Pellentesque at erat accumsan, volutpat risus eget,
+            congue tellus. Sed a placerat ligula, a bibendum magna. In non vulputate orci, eu imperdiet dolor. Etiam
+            dictum, nisl in ornare maximus, mauris risus blandit libero, vitae cursus arcu felis ac sapien. Class aptent
+            taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+        <p><strong>#4</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a ante in quam consequat laoreet a sit amet
+            turpis. Mauris vitae sodales ligula, ac molestie urna. Pellentesque at erat accumsan, volutpat risus eget,
+            congue tellus. Sed a placerat ligula, a bibendum magna. In non vulputate orci, eu imperdiet dolor. Etiam
+            dictum, nisl in ornare maximus, mauris risus blandit libero, vitae cursus arcu felis ac sapien. Class aptent
+            taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+        <p><strong>#5</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a ante in quam consequat laoreet a sit amet
+            turpis. Mauris vitae sodales ligula, ac molestie urna. Pellentesque at erat accumsan, volutpat risus eget,
+            congue tellus. Sed a placerat ligula, a bibendum magna. In non vulputate orci, eu imperdiet dolor. Etiam
+            dictum, nisl in ornare maximus, mauris risus blandit libero, vitae cursus arcu felis ac sapien. Class aptent
+            taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+        <p><strong>#6</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a ante in quam consequat laoreet a sit amet
+            turpis. Mauris vitae sodales ligula, ac molestie urna. Pellentesque at erat accumsan, volutpat risus eget,
+            congue tellus. Sed a placerat ligula, a bibendum magna. In non vulputate orci, eu imperdiet dolor. Etiam
+            dictum, nisl in ornare maximus, mauris risus blandit libero, vitae cursus arcu felis ac sapien. Class aptent
+            taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+        <p><strong>#7</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a ante in quam consequat laoreet a sit amet
+            turpis. Mauris vitae sodales ligula, ac molestie urna. Pellentesque at erat accumsan, volutpat risus eget,
+            congue tellus. Sed a placerat ligula, a bibendum magna. In non vulputate orci, eu imperdiet dolor. Etiam
+            dictum, nisl in ornare maximus, mauris risus blandit libero, vitae cursus arcu felis ac sapien. Class aptent
+            taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+        <p><strong>#8</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a ante in quam consequat laoreet a sit amet
+            turpis. Mauris vitae sodales ligula, ac molestie urna. Pellentesque at erat accumsan, volutpat risus eget,
+            congue tellus. Sed a placerat ligula, a bibendum magna. In non vulputate orci, eu imperdiet dolor. Etiam
+            dictum, nisl in ornare maximus, mauris risus blandit libero, vitae cursus arcu felis ac sapien. Class aptent
+            taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+        <p><strong>#9</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a ante in quam consequat laoreet a sit amet
+            turpis. Mauris vitae sodales ligula, ac molestie urna. Pellentesque at erat accumsan, volutpat risus eget,
+            congue tellus. Sed a placerat ligula, a bibendum magna. In non vulputate orci, eu imperdiet dolor. Etiam
+            dictum, nisl in ornare maximus, mauris risus blandit libero, vitae cursus arcu felis ac sapien. Class aptent
+            taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+        <p><strong>#10</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a ante in quam consequat laoreet a sit amet
+            turpis. Mauris vitae sodales ligula, ac molestie urna. Pellentesque at erat accumsan, volutpat risus eget,
+            congue tellus. Sed a placerat ligula, a bibendum magna. In non vulputate orci, eu imperdiet dolor. Etiam
+            dictum, nisl in ornare maximus, mauris risus blandit libero, vitae cursus arcu felis ac sapien. Class aptent
+            taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+        <p><strong>#11</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a ante in quam consequat laoreet a sit amet
+            turpis. Mauris vitae sodales ligula, ac molestie urna. Pellentesque at erat accumsan, volutpat risus eget,
+            congue tellus. Sed a placerat ligula, a bibendum magna. In non vulputate orci, eu imperdiet dolor. Etiam
+            dictum, nisl in ornare maximus, mauris risus blandit libero, vitae cursus arcu felis ac sapien. Class aptent
+            taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+        <p><strong>#12</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a ante in quam consequat laoreet a sit amet
+            turpis. Mauris vitae sodales ligula, ac molestie urna. Pellentesque at erat accumsan, volutpat risus eget,
+            congue tellus. Sed a placerat ligula, a bibendum magna. In non vulputate orci, eu imperdiet dolor. Etiam
+            dictum, nisl in ornare maximus, mauris risus blandit libero, vitae cursus arcu felis ac sapien. Class aptent
+            taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+        <p><strong>#13</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a ante in quam consequat laoreet a sit amet
+            turpis. Mauris vitae sodales ligula, ac molestie urna. Pellentesque at erat accumsan, volutpat risus eget,
+            congue tellus. Sed a placerat ligula, a bibendum magna. In non vulputate orci, eu imperdiet dolor. Etiam
+            dictum, nisl in ornare maximus, mauris risus blandit libero, vitae cursus arcu felis ac sapien. Class aptent
+            taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+        <p><strong>#14</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a ante in quam consequat laoreet a sit amet
+            turpis. Mauris vitae sodales ligula, ac molestie urna. Pellentesque at erat accumsan, volutpat risus eget,
+            congue tellus. Sed a placerat ligula, a bibendum magna. In non vulputate orci, eu imperdiet dolor. Etiam
+            dictum, nisl in ornare maximus, mauris risus blandit libero, vitae cursus arcu felis ac sapien. Class aptent
+            taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+        <p><strong>#15</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a ante in quam consequat laoreet a sit amet
+            turpis. Mauris vitae sodales ligula, ac molestie urna. Pellentesque at erat accumsan, volutpat risus eget,
+            congue tellus. Sed a placerat ligula, a bibendum magna. In non vulputate orci, eu imperdiet dolor. Etiam
+            dictum, nisl in ornare maximus, mauris risus blandit libero, vitae cursus arcu felis ac sapien. Class aptent
+            taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+        <p><strong>#16</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a ante in quam consequat laoreet a sit amet
+            turpis. Mauris vitae sodales ligula, ac molestie urna. Pellentesque at erat accumsan, volutpat risus eget,
+            congue tellus. Sed a placerat ligula, a bibendum magna. In non vulputate orci, eu imperdiet dolor. Etiam
+            dictum, nisl in ornare maximus, mauris risus blandit libero, vitae cursus arcu felis ac sapien. Class aptent
+            taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+        <p><strong>#17</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a ante in quam consequat laoreet a sit amet
+            turpis. Mauris vitae sodales ligula, ac molestie urna. Pellentesque at erat accumsan, volutpat risus eget,
+            congue tellus. Sed a placerat ligula, a bibendum magna. In non vulputate orci, eu imperdiet dolor. Etiam
+            dictum, nisl in ornare maximus, mauris risus blandit libero, vitae cursus arcu felis ac sapien. Class aptent
+            taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+        <p><strong>#18</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a ante in quam consequat laoreet a sit amet
+            turpis. Mauris vitae sodales ligula, ac molestie urna. Pellentesque at erat accumsan, volutpat risus eget,
+            congue tellus. Sed a placerat ligula, a bibendum magna. In non vulputate orci, eu imperdiet dolor. Etiam
+            dictum, nisl in ornare maximus, mauris risus blandit libero, vitae cursus arcu felis ac sapien. Class aptent
+            taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+        <p><strong>#19</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a ante in quam consequat laoreet a sit amet
+            turpis. Mauris vitae sodales ligula, ac molestie urna. Pellentesque at erat accumsan, volutpat risus eget,
+            congue tellus. Sed a placerat ligula, a bibendum magna. In non vulputate orci, eu imperdiet dolor. Etiam
+            dictum, nisl in ornare maximus, mauris risus blandit libero, vitae cursus arcu felis ac sapien. Class aptent
+            taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+        <p><strong>#20</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a ante in quam consequat laoreet a sit amet
+            turpis. Mauris vitae sodales ligula, ac molestie urna. Pellentesque at erat accumsan, volutpat risus eget,
+            congue tellus. Sed a placerat ligula, a bibendum magna. In non vulputate orci, eu imperdiet dolor. Etiam
+            dictum, nisl in ornare maximus, mauris risus blandit libero, vitae cursus arcu felis ac sapien. Class aptent
+            taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+
     </div>
 
-    <div class="page" size="A4">
-    </div>
-
-    <div class="page" size="A4">
-    </div>
+    <div class="page" size="A4"></div>
+    <div class="page" size="A4"></div>
+    <div class="page" size="A4"></div>
+    <div class="page" size="A4"></div>
+    <div class="page" size="A4"></div>
+    <div class="page" size="A4"></div>
+    <div class="page" size="A4"></div>
 </div>
 
 </body>

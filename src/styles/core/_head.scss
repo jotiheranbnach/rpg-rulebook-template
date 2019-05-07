@@ -15,4 +15,38 @@
     h1 {
         color: white;
     }
+
+    .distribution-button {
+        position: fixed;
+        left: 5vh;
+        top: 10vh;
+        display: flex;
+
+        border: 1px solid #d71d5f;
+        border-radius: 1rem;
+        background-color: #E91E63;
+        padding: .8rem;
+        cursor: pointer;
+
+        color: white;
+        font-size: 1rem;
+
+        $blur: 20px;
+        $alpha: .1;
+        box-shadow: -2px 2px $blur rgba(0, 0, 0, $alpha), -2px -2px $blur rgba(0, 0, 0, $alpha), 2px -2px $blur rgba(0, 0, 0, $alpha), 2px 2px $blur rgba(0, 0, 0, $alpha);
+
+
+        &:hover {
+            background-color: #d71d5f;
+        }
+
+        i {
+            font-size: 2rem;
+        }
+
+        .text {
+            margin-left: 1rem;
+            text-align: left;
+        }
+    }
 }

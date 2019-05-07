@@ -8,11 +8,6 @@ body {
   font-size: 14px;
 }
 
-@page {
-  size: A4;
-  margin: 0;
-}
-
 @media print {
   .no-print, .no-print * {
     display: none !important;
