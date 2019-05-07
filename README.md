@@ -15,24 +15,24 @@ machine for development and testing purposes.
 
 The following things must be available on you machine. The versions displayed below are the versions I used/use for developing and testing. You MAY try other versions.
 
-```
-Git 2.7.4
-Node v10.15.3
-NPM 6.4.1
-```
+
+* Git - v2.7.4
+* Node - v10.15.3
+* NPM - v6.4.1
+
 
 ### Installing
 
 First open you CLI and go into the folder where you want to put your next creative work.
 Then clone the repository:
 
-```
+```console
 git clone https://github.com/jotiheranbnach/rpg-rulebook-template.git
 ```
 
 Then step into the cloned repository and install all node modules:
 
-```
+```console
 cd rpg-rulebook-template
 npm install
 ```
