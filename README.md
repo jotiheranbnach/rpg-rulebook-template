@@ -13,7 +13,7 @@ machine for development and testing purposes.
 
 ### Prerequisites
 
-The following thing must be available on you machine. The versions displayed below are the version I used/use for developing and testing. You MAY try other versions.
+The following things must be available on you machine. The versions displayed below are the versions I used/use for developing and testing. You MAY try other versions.
 
 ```
 Git 2.7.4
