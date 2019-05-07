@@ -16,6 +16,7 @@
 
     @media print {
         box-shadow: none;
+        column-fill: auto;
         &[size="A4"] {
             width: $a4-page-width;
             height: $a4-page-height;
